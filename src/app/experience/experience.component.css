@@ -1,0 +1,60 @@
+.title {
+    font-size: 26px;
+}
+
+.filters {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.experience-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    .left-side {
+        font-size: 13px;
+        font-style: bold;
+        min-width: 150px;
+    }
+
+    .right-side {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 22px;
+
+        .title-row {
+            font-size: 16px;
+        }
+
+        .description {
+            font-size: 15px;
+        }
+
+        .link-area {
+            display: flex;
+            flex-direction: row;
+            cursor: pointer;
+
+            p {
+                font-size: 14px;
+                color: var(--gray-400);
+            }
+            svg {
+                margin-right: 10px;
+                path {
+                    fill: var(--gray-400);
+                }
+            }
+        }
+        .link-area:hover  {
+            svg path {
+                fill: var(--link-hover);
+            }
+            p {
+                color: var(--link-hover);
+            }
+        }
+    }
+}

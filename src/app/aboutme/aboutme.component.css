@@ -1,0 +1,38 @@
+.container {
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.name {
+    font-size: 70px;
+    font-style: italic;
+    color: var(--base-diff);
+}
+
+.p-container {
+    text-align: left;
+    margin-top: 60px;
+}
+
+p {
+    color: var(--dark-color);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+}
+
+.social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+}
+
+.social-links a:hover svg path {
+    fill: var(--gray-900);
+}
+

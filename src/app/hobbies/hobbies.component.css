@@ -1,0 +1,18 @@
+.title {
+    font-size: 26px;
+}
+
+.sub-title {
+    font-size: 24px;
+}
+
+.anim-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .anim-card {
+    max-width: 300px;
+    }
+}

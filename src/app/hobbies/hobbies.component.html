@@ -1,0 +1,17 @@
+<div>
+    <h4 class="title">Hobbies</h4>
+    <div class="animation-section">
+        <h5 class="sub-title">Animated GIFs</h5>
+        <div class="anim-cards">
+            @for (gifImg of gifs; track gifImg) {
+                <mat-card class="anim-card">
+                    <img mat-card-image
+                    src="{{gifImg.imgUrl}}"
+                    (mouseover)="gifImg.imgUrl=gifImg.src"
+                    (mouseout)="gifImg.imgUrl=gifImg.staticSrc"
+                    alt="{{gifImg.alt}}">
+                </mat-card>
+            }
+        </div>
+    </div>
+</div>
