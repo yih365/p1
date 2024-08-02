@@ -18,7 +18,8 @@
                 <mat-card-footer class="project-card-footer">
                     <mat-chip-set aria-label="Skills">
                         @for (skill of project.skills; track skill) {
-                            <mat-chip class="project-card-chip">{{skill}}</mat-chip>
+                            <!-- <mat-chip class="project-card-chip">{{skill}}</mat-chip> -->
+                            <div class="project-card-chip">{{skill}}</div>
                         }
                     </mat-chip-set>
                 </mat-card-footer>

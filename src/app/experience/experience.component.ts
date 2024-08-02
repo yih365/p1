@@ -48,6 +48,24 @@ export class ExperienceComponent {
       position: "Software Engineer Intern",
       startDate: {
         month: 6,
+        year: 2024
+      },
+      endDate: {
+        month: 9,
+        year: 2024
+      },
+      description: [
+        "Improve the overall reliability of contacts sync for 5.5 million WearOS devices.",
+        "Increase the daily up-to-date rate of contacts by designing a new form of sync, running daily to efficiently identify then update mismatched contacts.",
+      ].join(" "),
+      links: [],
+      tag: ExperienceTag.SOFTWARE
+    },
+    {
+      company: "Google",
+      position: "Software Engineer Intern",
+      startDate: {
+        month: 6,
         year: 2023
       },
       endDate: {
@@ -168,7 +186,12 @@ export class ExperienceComponent {
       tag: ExperienceTag.TEACHING
     }
   ];
+  readonly allExperienceRows: ExperienceRow[] = this.softwareExperienceRows.concat(this.researchExperienceRows).concat(this.teachingExperienceRows);
   experienceRows: ExperienceRow[] = this.getFiltersFromSelection(this.defaultFilter);
+
+  constructor() {
+    this.sortAllExperiences();
+  }
 
   // Function to format date data to string
   getFullDateString(startDate: Date, endDate: Date) {
@@ -196,14 +219,31 @@ export class ExperienceComponent {
         return this.teachingExperienceRows;
       default:
         // display all
-        // TODO: sort by date
-        return this.softwareExperienceRows
-          .concat(this.researchExperienceRows)
-          .concat(this.teachingExperienceRows);
+        return this.allExperienceRows;
     }
   }
 
   openLink(link: string) {
     window.open(link, "_blank");
+  }
+
+  sortAllExperiences() {
+    this.allExperienceRows.sort(this.compareExperience);
+  }
+
+  compareExperience(a:ExperienceRow, b:ExperienceRow):number {
+    let dateA = a.endDate;
+    let dateB = b.endDate;
+    if (dateA.year < dateB.year) {
+      return 1;
+    } else if (dateA.year == dateB.year) {
+      if (dateA.month < dateB.month) {
+        return 1;
+      } else {
+        return -1;
+      }
+    } else {
+      return -1;
+    }
   }
 }

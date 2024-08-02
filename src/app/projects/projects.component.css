@@ -39,13 +39,22 @@
 
         .project-card-chip {
             cursor: pointer;
-            --mdc-chip-label-text-color: #0e0e0e;
+            color: #0e0e0e;
             font-size: 14px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: #f8fafa;
+            display: inline-block;
+            padding: 0 10px;
+            height: 25px;
+            margin: 5px;
+            text-align: center;
+            text-anchor: middle;
         }
     }
 }
 .project-card:hover {
-    background-color: #f8fafa;
+    background-color: var(--secondary-background-color);
     border-color: var(--gray-400);
 
     .project-card-header {
@@ -59,6 +68,11 @@
             path {
                 fill: var(--link-hover);
             }
+        }
+    }
+    .project-card-footer {
+        .project-card-chip {
+            border-color: var(--gray-400);
         }
     }
 }
