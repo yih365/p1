@@ -69,3 +69,14 @@ a:active {
   color: black;
 }
 
+@media screen and (max-width: 650px) {
+    .header-nav {
+        gap: 15px;
+
+        .nav-link {
+            visibility: hidden;
+            font-size: 1px;
+        }
+    }
+}
+

@@ -76,3 +76,9 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .title {
+        font-size: 23px;
+    }   
+}

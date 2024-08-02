@@ -10,6 +10,10 @@
     color: var(--base-diff);
 }
 
+.aboutme-title {
+    display: none;
+}
+
 .p-container {
     text-align: left;
     margin-top: 60px;
@@ -36,3 +40,17 @@ p {
     fill: var(--gray-900);
 }
 
+@media screen and (max-width: 650px) {
+    .name {
+        display: none;
+    }
+
+    .aboutme-title {
+        display: none;
+        font-size: larger;
+    }
+
+    .p-container {
+        margin-top: 30px;
+    }
+}

@@ -58,3 +58,19 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    .title {
+        font-size: 23px;
+    }
+    .experience-rows {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        .experience-row {
+            flex-direction: column;
+            gap: 7px;
+        }
+    }
+}
